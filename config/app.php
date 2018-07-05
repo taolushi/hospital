@@ -227,5 +227,10 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
     ],
+    'wechat' => [
+	'appid' => 'wxbe2bc867dc1764f0',
+	'appSecret' => '76810cbf9731fe1fb48ab9ede62efb1a',
+	'token' => 'zsjk123456'
+    ]
 
 ];

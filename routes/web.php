@@ -14,6 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::group(['prefix' => 'api/v1', 'namespace' => 'api\v1'],function() {
+Route::group(['prefix' => 'api/v1', 'namespace' => 'Api\v1'],function() {
     Route::any('wechat','WechatController@index');
+    Route::any('accessToken','WechatController@getAccess_token');
+    Route::any('qr','WechatController@getQr');
 });
