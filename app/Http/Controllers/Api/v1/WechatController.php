@@ -9,7 +9,12 @@ class WechatController extends BaseController {
      */
     public function index() {
 //        echo 'signature55555';
+        $tmp = fopen('./heihei.txt','w+');
+
         $signature = request()->get('signature');
+        print_r(fwrite($tmp,$signature));
+        file_put_contents('');
+
         $timestamp = request()->get('timestamp');
         $nonce = request()->get('nonce');
         $echostr = request()->get('echostr');
@@ -20,6 +25,7 @@ class WechatController extends BaseController {
         $tmpstr = sha1($tmpstr);
         if ($signature == $tmpstr && $echostr) {
             echo $echostr;exit;
+
         }
 //        print_r($signature);exit;
     }
