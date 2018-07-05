@@ -9,6 +9,7 @@ namespace App\Http\Controllers;
 use Illuminate\Routing\Controller;
 class BaseController extends Controller {
     public function __construct() {
+<<<<<<< HEAD
         $user_info = session('user_info');
         $openid = session('openid');
         if (empty($user_info) && empty($openid)) {
@@ -21,5 +22,7 @@ class BaseController extends Controller {
             header('Location: '.$url, true, 301);
 
         }
+=======
+>>>>>>> 4ce6edd8a9ecf54f2c95be43c13cf00216e13db6
     }
 }
